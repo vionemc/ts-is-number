@@ -1,17 +1,15 @@
 {
   "name": "is-number",
-  "description": "Returns true if a number or string value is a finite number. Useful for regex matches, parsing, user input, etc.",
-  "version": "7.0.0",
-  "homepage": "https://github.com/jonschlinkert/is-number",
-  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "description": "Returns true if a number or string value is a finite number. Useful for regex matches, parsing, user input, etc. A Typescript refactor version.",
+  "version": "1.0.0",
+  "homepage": "https://github.com/vionemc/ts-is-number",
+  "author": "Aminah Nuraini (https://github.com/vionemc)",
   "contributors": [
-    "Jon Schlinkert (http://twitter.com/jonschlinkert)",
-    "Olsten Larck (https://i.am.charlike.online)",
-    "Rouven Weßling (www.rouvenwessling.de)"
+    "Aminah Nuraini (https://www.upwork.com/freelancers/aminahnuraini)"
   ],
-  "repository": "jonschlinkert/is-number",
+  "repository": "vionemc/ts-is-number",
   "bugs": {
-    "url": "https://github.com/jonschlinkert/is-number/issues"
+    "url": "https://github.com/vionemc/ts-is-number/issues"
   },
   "license": "MIT",
   "files": [
@@ -22,15 +20,22 @@
     "node": ">=0.12.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha -r tsx src/test/test.ts"
   },
   "devDependencies": {
+    "@types/chai": "^5.2.2",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^24.2.0",
     "ansi": "^0.3.1",
     "benchmark": "^2.1.4",
+    "chai": "^5.2.1",
     "gulp-format-md": "^1.0.0",
-    "mocha": "^3.5.3"
+    "mocha": "^11.7.1",
+    "typescript": "^5.9.2",
+    "tsx": "^4.20.3"
   },
   "keywords": [
+    "typescript",
     "cast",
     "check",
     "coerce",

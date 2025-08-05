@@ -1,13 +1,11 @@
 /*!
- * is-number <https://github.com/jonschlinkert/is-number>
+ * is-number <https://github.com/vionemc/ts-is-number>
  *
- * Copyright (c) 2014-present, Jon Schlinkert.
+ * Copyright (c) 2025-present, Aminah Nuraini.
  * Released under the MIT License.
  */
 
-'use strict';
-
-module.exports = function(num) {
+export default function(num: unknown) : boolean {
   if (typeof num === 'number') {
     return num - num === 0;
   }

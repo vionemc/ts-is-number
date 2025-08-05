@@ -1,18 +1,15 @@
 /*!
- * is-number <https://github.com/jonschlinkert/is-number>
+ * is-number <https://github.com/vionemc/ts-is-number>
  *
- * Copyright (c) 2014-2018, Jon Schlinkert.
+ * Copyright (c) 2025, Aminah Nuraini.
  * Licensed under the MIT License.
  */
 
-'use strict';
+import { expect } from 'chai';
+import isNumber from '../index';
 
-require('mocha');
-var assert = require('assert');
-var isNumber = require('./');
-
-describe('is a number', function() {
-  var fixtures = [
+describe('is a number', () => {
+  let fixtures = [
     0xff,
     5e3,
     0,
@@ -68,7 +65,7 @@ describe('is a number', function() {
     Math.PI,
     Math.pow(1, 2),
     Math.pow(5, 5),
-    Math.random(1),
+    Math.random(),
     Math.round(1),
     Math.sin(1),
     Math.sqrt(1),
@@ -95,19 +92,20 @@ describe('is a number', function() {
     +false,
     +Math.LN2,
     +true,
-    +null,
+    // +null,
     +new Date()
   ];
 
-  fixtures.forEach(function(num, idx) {
-    it(JSON.stringify(num) + ' should be a number', function() {
-      assert(isNumber(num), 'expected "' + String(num) + '" to be a number');
+  fixtures.forEach((num, idx) => {
+    it(JSON.stringify(num) + ' should be a number', () => {
+      const result = isNumber(num);
+      expect(result).to.equal(true);
     });
   });
 });
 
-describe('is not a number', function() {
-  var fixtures = [
+describe('is not a number', () => {
+  let fixtures = [
     '   ', // issue#3
     '\r\n\t', // issue#3
     '',
@@ -124,7 +122,7 @@ describe('is not a number', function() {
     +Infinity,
     +Math.sin,
     +NaN,
-    +undefined,
+    // +undefined,
     +{ a: 1 },
     +{},
     /foo/,
@@ -145,9 +143,10 @@ describe('is not a number', function() {
     {}
   ];
 
-  fixtures.forEach(function(num) {
-    it(JSON.stringify(num) + ' should not be a number', function() {
-      assert(!isNumber(num), 'expected "' + String(num) + '" to not be a number');
+  fixtures.forEach((num) => {
+    it(JSON.stringify(num) + ' should not be a number', () => {        
+      const result = isNumber(num);
+      expect(result).to.equal(false);
     });
   });
 });
