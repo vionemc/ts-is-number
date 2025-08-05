@@ -15,7 +15,7 @@
   "files": [
     "index.js"
   ],
-  "main": "index.js",
+  "main": "dist/index.js",
   "engines": {
     "node": ">=0.12.0"
   },
