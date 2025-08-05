@@ -7,7 +7,10 @@
   "contributors": [
     "Aminah Nuraini (https://www.upwork.com/freelancers/aminahnuraini)"
   ],
-  "repository": "vionemc/ts-is-number",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vionemc/ts-is-number.git"
+  },
   "bugs": {
     "url": "https://github.com/vionemc/ts-is-number/issues"
   },
@@ -15,7 +18,7 @@
   "files": [
     "index.js"
   ],
-  "main": "index.js",
+  "main": "dist/index.js",
   "engines": {
     "node": ">=0.12.0"
   },
