@@ -1,5 +1,5 @@
 {
-  "name": "is-number",
+  "name": "@vionemc/ts-is-number",
   "description": "Returns true if a number or string value is a finite number. Useful for regex matches, parsing, user input, etc. A Typescript refactor version.",
   "version": "1.0.0",
   "homepage": "https://github.com/vionemc/ts-is-number",
